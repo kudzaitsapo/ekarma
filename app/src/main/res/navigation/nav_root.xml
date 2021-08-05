@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_root"
+    app:startDestination="@id/peopleFragment">
+
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.kudzaitsapo.karmanote.ui.fragments.PeopleFragment"
+        android:label="PeopleFragment" />
+    <fragment
+        android:id="@+id/deedsFragment"
+        android:name="com.kudzaitsapo.karmanote.ui.fragments.DeedsFragment"
+        android:label="DeedsFragment" />
+    <fragment
+        android:id="@+id/editDeedFragment"
+        android:name="com.kudzaitsapo.karmanote.ui.fragments.EditDeedFragment"
+        android:label="EditDeedFragment" />
+    <fragment
+        android:id="@+id/addDeedFragment"
+        android:name="com.kudzaitsapo.karmanote.ui.fragments.AddDeedFragment"
+        android:label="AddDeedFragment" />
+    <fragment
+        android:id="@+id/addPeopleFragment"
+        android:name="com.kudzaitsapo.karmanote.ui.fragments.AddPeopleFragment"
+        android:label="AddPeopleFragment" />
+</navigation>
