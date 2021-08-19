@@ -11,7 +11,7 @@ import kotlinx.coroutines.flow.Flow
 interface PeopleDao {
 
     @Insert
-    fun insertPerson(vararg person: PeopleEntity)
+    fun insertPerson(person: PeopleEntity) : Long
 
     @Delete
     fun delete(person: PeopleEntity)

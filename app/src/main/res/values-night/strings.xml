@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">eKarma</string>
     <string name="top_header_text">People I\'m grateful to</string>
     <string name="fabContentDescription">Add a person</string>
     <string name="search_hint">Search for a person</string>

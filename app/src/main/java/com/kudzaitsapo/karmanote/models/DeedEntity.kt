@@ -8,14 +8,11 @@ import androidx.room.PrimaryKey
 data class DeedEntity(
 
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int = 0,
 
     @ColumnInfo(name = "person_id")
     val personId: Int,
 
     @ColumnInfo(name = "description")
-    val description: String,
-
-    @ColumnInfo(name = "resolution")
-    val resolution: String?
+    val description: String
 )

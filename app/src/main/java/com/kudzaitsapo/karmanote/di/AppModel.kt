@@ -17,11 +17,7 @@ object AppModel {
     @Singleton
     @Provides
     fun provideDatabase(@ApplicationContext context: Context) : AppDatabase {
-        return Room.databaseBuilder(
-            context,
-            AppDatabase::class.java,
-            "deeds.db"
-        ).build()
+        return AppDatabase.getAppDatabase(context)
     }
 
     @Singleton

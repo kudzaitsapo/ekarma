@@ -7,21 +7,50 @@
     <fragment
         android:id="@+id/peopleFragment"
         android:name="com.kudzaitsapo.karmanote.ui.fragments.PeopleFragment"
-        android:label="PeopleFragment" />
+        android:label="PeopleFragment" >
+        <action
+            android:id="@+id/action_peopleFragment_to_deedsFragment"
+            app:destination="@id/deedsFragment" />
+        <action
+            android:id="@+id/action_peopleFragment_to_addPeopleFragment"
+            app:destination="@id/addPeopleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/deedsFragment"
         android:name="com.kudzaitsapo.karmanote.ui.fragments.DeedsFragment"
-        android:label="DeedsFragment" />
+        android:label="DeedsFragment" >
+        <argument
+            android:name="person_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_deedsFragment_to_addDeedFragment"
+            app:destination="@id/addDeedFragment" />
+        <action
+            android:id="@+id/action_deedsFragment_to_editDeedFragment"
+            app:destination="@id/editDeedFragment" />
+    </fragment>
     <fragment
         android:id="@+id/editDeedFragment"
         android:name="com.kudzaitsapo.karmanote.ui.fragments.EditDeedFragment"
-        android:label="EditDeedFragment" />
+        android:label="EditDeedFragment" >
+        <argument
+            android:name="deed_id"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/addDeedFragment"
         android:name="com.kudzaitsapo.karmanote.ui.fragments.AddDeedFragment"
-        android:label="AddDeedFragment" />
+        android:label="AddDeedFragment" >
+        <argument
+            android:name="person_id"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/addPeopleFragment"
         android:name="com.kudzaitsapo.karmanote.ui.fragments.AddPeopleFragment"
-        android:label="AddPeopleFragment" />
+        android:label="AddPeopleFragment" >
+        <action
+            android:id="@+id/action_addPeopleFragment_to_deedsFragment"
+            app:destination="@id/deedsFragment" />
+    </fragment>
 </navigation>

@@ -8,13 +8,13 @@ import kotlinx.coroutines.flow.Flow
 interface DeedsDao {
 
     @Insert
-    fun insertDeed(vararg deed: DeedEntity)
+    fun insertDeed(deed: DeedEntity) : Long
 
     @Delete
     fun delete(deed: DeedEntity)
 
     @Query("SELECT * FROM deeds WHERE person_id=:personId")
-    fun getPersonDeeds(personId: Int) : Flow<DeedEntity>
+    fun getPersonDeeds(personId: Int) : Flow<List<DeedEntity>>
 
     @Update
     fun updateDeed(vararg deed: DeedEntity)
